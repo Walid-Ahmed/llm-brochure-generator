@@ -4,7 +4,7 @@ This project automatically generates a short **company brochure** from a website
 It scrapes the company’s landing page and relevant links (About, Careers, etc.), then summarizes them into a structured Markdown brochure.  
 
 The system supports two backends for the LLMs:
-- **Ollama** (local model inference, e.g., LLaMA 3.2)
+- **Ollama** (local model inference, e.g., LLaMA 3.2)  
 - **OpenAI API** (cloud-based model, e.g., GPT-4o-mini)
 
 ---
@@ -36,8 +36,7 @@ The system supports two backends for the LLMs:
    ```bash
    pip install -r requirements.txt
    ```
-
-4. Add your API keys to a `.env` file (for OpenAI):
+4. (For OpenAI only) Add your API key to a `.env` file:
    ```
    OPENAI_API_KEY=sk-proj-xxxx
    ```
@@ -47,6 +46,13 @@ The system supports two backends for the LLMs:
 ## ▶️ Usage
 
 ### Run with Ollama
+Before running, make sure you have pulled the model you want to use (for example, LLaMA 3.2):
+
+```bash
+ollama pull llama3.2
+```
+
+Then run:
 ```bash
 python run_w_ollama.py
 ```
@@ -88,5 +94,3 @@ After running the pipeline on `https://huggingface.co`, you’ll get a Markdown 
 ## Careers
 ...
 ```
-
----
